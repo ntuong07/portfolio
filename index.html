@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Võ Nhật Tường | Portfolio sinh viên CNTT</title>
+  <meta name="description" content="Portfolio cá nhân của sinh viên Công nghệ thông tin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div id="glow" aria-hidden="true"></div>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header">
+    <nav class="vnt container" aria-label="Menu chính">
+      <a href="#home" class="logo">nhattuong<span>.dev</span></a>
+      <div class="profile">
+        <strong>Võ Nhật Tường</strong>
+        <span>Game Developer</span>
+      </div>
+      <ul id="menu" class="menu">
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#education">Học vấn</a></li>
+        <li><a href="#projects">Dự án</a></li>
+        <li><a href="#extras">Thành tích</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <p class="open-to">Sinh viên năm 2</p>
+      <button id="themeBtn" class="icon-btn" aria-label="Đổi giao diện sáng/tối">🌙</button>
+      <button id="burger" class="icon-btn burger" aria-label="Mở menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== BANNER ===== -->
+    <section id="home" class="hero">
+      <h1>Mình là <mark>Võ Nhật Tường</mark>,<br>sinh viên CNTT.</h1>
+      <p class="code">&gt; <span id="typing"></span><i class="cursor"></i></p>
+      <div class="cta">
+        <a class="btn" href="#projects">Xem dự án</a>
+        <a class="btn ghost" href="#contact">Liên hệ mình</a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="track"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>C#</span><span>Git</span><span>GitHub</span><span>C++</span><span>Unity</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>C++</span><span>Git</span><span>GitHub</span><span>C#</span><span>Unity</span></div></div>
+
+    <!-- ===== GIỚI THIỆU + MỤC TIÊU ===== -->
+    <section id="about" class="reveal">
+      <h2>Giới thiệu bản thân</h2>
+      <div class="about">
+        <img class="avatar" src="images/tuong.png" alt="Ảnh đại diện của Võ Nhật Tường" width="240" height="240">
+        <div>
+          <p>Mình là <strong>Võ Nhật Tường</strong>, sinh viên ngành <strong>Công nghệ thông tin</strong> tại Trường ĐH Giao thông vận tải TP.HCM (UTH). Mình đam mê phát triển game và thích biến những ý tưởng sáng tạo thành các trải nghiệm tương tác hấp dẫn thông qua lập trình, thiết kế gameplay và tối ưu trải nghiệm người chơi.</p>
+          <dl class="info">
+            <div><dt>Định hướng</dt><dd>Game Developer</dd></div>
+            <div><dt>Email</dt><dd>vntuong1234@gmail.com</dd></div>
+            <div><dt>Khu vực</dt><dd>TP. Hồ Chí Minh</dd></div>
+          </dl>
+          <ul class="stats">
+            <li><b data-count="2">0</b><span>năm học CNTT</span></li>
+            <li><b data-count="3">0</b><span>dự án cá nhân</span></li>
+            <li><b data-count="500" data-suffix="+">0</b><span>giờ code</span></li>
+          </ul>
+        </div>
+      </div>
+      <blockquote class="goal">
+        <h3>Mục tiêu nghề nghiệp</h3>
+        <p>Trở thành Game Developer vững kiến thức nền tảng, thực tập tại một công ty công nghệ trong 12 tháng tới và hoàn thiện kỹ năng làm việc nhóm cùng quy trình Git.</p>
+      </blockquote>
+    </section>
+
+    <!-- ===== KỸ NĂNG ===== -->
+    <section id="skills" class="reveal">
+      <h2>Kỹ năng</h2>
+      <ul class="skills">
+        <li style="--w:90%"><span>C#</span><b class="bar"><i></i></b></li>
+        <li style="--w:85%"><span>C++</span><b class="bar"><i></i></b></li>
+        <li style="--w:70%"><span>Python</span><b class="bar"><i></i></b></li>
+        <li style="--w:65%"><span>JavaScript</span><b class="bar"><i></i></b></li>
+        <li style="--w:60%"><span>HTML5</span><b class="bar"><i></i></b></li>
+        <li style="--w:60%"><span>CSS3</span><b class="bar"><i></i></b></li>
+      </ul>
+    </section>
+
+    <!-- ===== HỌC VẤN / HOẠT ĐỘNG ===== -->
+    <section id="education" class="reveal">
+      <h2>Học vấn &amp; hoạt động</h2>
+      <ol class="timeline">
+        <li><time>2025 – nay</time><h3>Đại học Giao thông vận tải TP.HCM (UTH)</h3><p>Ngành Công nghệ thông tin. Chuyên ngành Khoa học dữ liệu & AI</p></li>
+        <li><time>2021 – 2025</time><h3>THPT (Vĩnh Bình Bắc)</h3><p>Học sinh giỏi, tham gia câu lạc bộ lập trình của trường.</p></li>
+      </ol>
+    </section>
+
+    <!-- ===== DỰ ÁN ===== -->
+    <section id="projects" class="reveal">
+      <h2>Dự án cá nhân</h2>
+      <div class="filters" role="group" aria-label="Lọc dự án">
+        <button class="chip active" data-filter="all">Tất cả</button>
+        <button class="chip" data-filter="web">Website</button>
+        <button class="chip" data-filter="app">Ứng dụng</button>
+      </div>
+      <div class="projects">
+        <article class="project" data-cat="app">
+          <img src="images/spaceinvader.png" alt="Giao diện game Space Invaders" loading="lazy">
+          <div class="body">
+            <h3>Game Space Invaders</h3>
+            <p>Tái hiện lại trò chơi Space Invader</p>
+            <p class="tags">Qt · C++</p>
+            <button class="link" data-title="Game Space Invaders" data-desc="Space Invader là trò chơi bắn súng không gian góc nhìn từ trên xuống (Top-down Shooter). Người chơi điều khiển một máy bay ở đáy màn hình, di chuyển theo phương ngang để né tránh và bắn hạ các làn sóng quái vật ngoài hành tinh (Alien) đang rơi xuống liên tục.Trò chơi kết thúc khi người chơi hết mạng hoặcAlien xâm nhập thành công xuống vùng căn cứ." data-tech="Qt, C++" data-url="#">Xem chi tiết</button>
+          </div>
+        </article>
+        <article class="project" data-cat="app">
+          <img src="images/dinogame.png" alt="Giao diện DinoGame" loading="lazy">
+          <div class="body">
+            <h3>Game Dino</h3>
+            <p>Tựa game cuộn màn hình ngang vô tận (2D infinite runner).</p>
+            <p class="tags">C# · Unity</p>
+            <button class="link" data-title="Game Dino" data-desc="Người chơi điều khiển chú khủng long T-Rex đồ họa pixel di chuyển, ghi điểm bằng cách sống sót trước các chướng ngại vật xuất hiện với tốc độ tăng dần." data-tech="C#, Unity" data-url="#">Xem chi tiết</button>
+          </div>  
+        </article>
+        <article class="project" data-cat="web">
+          <img src="images/wedontsell.png" alt="Giao diện web WEDONTSELL" loading="lazy">
+          <div class="body">
+            <h3>Web WEDONTSELL</h3>
+            <p>Cung cấp đa dạng hàng hóa từ đồ điện tử đến thời trang với khẩu hiệu "Discover Millions of Products".</p>
+            <p class="tags">HTML · CSS · JavaScript</p>
+            <button class="link" data-title="Web WEDONTSELL" data-desc="Trang web WeDontSell Marketplace (wedontsell.eu.cc) là một nền tảng thương mại điện tử đa phân khúc, kết nối người mua với mạng lưới các nhà bán hàng đã qua kiểm định chất lượng. Giao diện trang chủ nổi bật với thông điệp Discover Millions of Products, đáp ứng đa dạng nhu cầu mua sắm qua các danh mục chính như thiết bị điện tử, thời trang, nhà cửa & đời sống, mỹ phẩm, bách hóa và văn phòng phẩm." data-tech="HTML, CSS, JavaScript" data-url="#">Xem chi tiết</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CHỨNG CHỈ / GIẢI THƯỞNG / SỞ THÍCH ===== -->
+    <section id="extras" class="reveal">
+      <h2>Chứng chỉ, giải thưởng &amp; sở thích</h2>
+      <div class="extras">
+        <div><h3>Chứng chỉ</h3><p>Certificate of completion: AI Fluency for educators</p><p>Github Copilot</p></div>
+        <div><h3>Giải thưởng</h3><p>Chưa có</p></div>
+        <div><h3>Sở thích</h3><p>Lập trình, xem phim, chơi game, nghe nhạc.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== LIÊN HỆ ===== -->
+    <section id="contact" class="reveal">
+      <h2>Liên hệ</h2>
+      <form id="form" class="form" novalidate>
+        <label>Họ và tên<input type="text" id="name" name="name" autocomplete="name"><small></small></label>
+        <label>Email<input type="email" id="email" name="email" autocomplete="email"><small></small></label>
+        <label class="full">Lời nhắn<textarea id="msg" name="msg" rows="4"></textarea><small></small></label>
+        <button class="btn" type="submit">Gửi lời nhắn</button>
+        <p id="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer container"><p>© 2026 Võ Nhật Tường CNTT</p></footer>
+
+  <button id="toTop" class="icon-btn top" aria-label="Lên đầu trang">↑</button>
+
+  <dialog id="modal">
+    <h3 id="mTitle"></h3>
+    <p id="mDesc"></p>
+    <p class="tags" id="mTech"></p>
+    <div class="cta"><a class="btn" id="mLink" href="#" target="_blank" rel="noopener">Xem mã nguồn</a><button class="btn ghost" id="mClose">Đóng</button></div>
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
