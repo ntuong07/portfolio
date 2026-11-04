@@ -1,174 +1,114 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Võ Nhật Tường | Portfolio sinh viên CNTT</title>
-  <meta name="description" content="Portfolio cá nhân của sinh viên Công nghệ thông tin">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm tính cách IT - Bài tập jQuery</title>
+    <!-- Nhúng file CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Nhúng thư viện jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <div id="progress"></div>
-  <canvas id="bg" aria-hidden="true"></canvas>
-  <div id="glow" aria-hidden="true"></div>
 
-  <!-- ===== HEADER / NAVBAR ===== -->
-  <header class="header">
-    <nav class="vnt container" aria-label="Menu chính">
-      <a href="#home" class="logo">nhattuong<span>.dev</span></a>
-      <div class="profile">
-        <strong>Võ Nhật Tường</strong>
-        <span>Game Developer</span>
-      </div>
-      <ul id="menu" class="menu">
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#skills">Kỹ năng</a></li>
-        <li><a href="#education">Học vấn</a></li>
-        <li><a href="#projects">Dự án</a></li>
-        <li><a href="#extras">Thành tích</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-      </ul>
-      <p class="open-to">Sinh viên năm 2</p>
-      <button id="themeBtn" class="icon-btn" aria-label="Đổi giao diện sáng/tối">🌙</button>
-      <button id="burger" class="icon-btn burger" aria-label="Mở menu" aria-expanded="false">☰</button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- ===== BANNER ===== -->
-    <section id="home" class="hero">
-      <h1>Mình là <mark>Võ Nhật Tường</mark>,<br>sinh viên CNTT.</h1>
-      <p class="code">&gt; <span id="typing"></span><i class="cursor"></i></p>
-      <div class="cta">
-        <a class="btn" href="#projects">Xem dự án</a>
-        <a class="btn ghost" href="#contact">Liên hệ mình</a>
-      </div>
-    </section>
-
-    <div class="marquee" aria-hidden="true"><div class="track"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>C#</span><span>Git</span><span>GitHub</span><span>C++</span><span>Unity</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>C++</span><span>Git</span><span>GitHub</span><span>C#</span><span>Unity</span></div></div>
-
-    <!-- ===== GIỚI THIỆU + MỤC TIÊU ===== -->
-    <section id="about" class="reveal">
-      <h2>Giới thiệu bản thân</h2>
-      <div class="about">
-        <img class="avatar" src="images/tuong.png" alt="Ảnh đại diện của Võ Nhật Tường" width="240" height="240">
-        <div>
-          <p>Mình là <strong>Võ Nhật Tường</strong>, sinh viên ngành <strong>Công nghệ thông tin</strong> tại Trường ĐH Giao thông vận tải TP.HCM (UTH). Mình đam mê phát triển game và thích biến những ý tưởng sáng tạo thành các trải nghiệm tương tác hấp dẫn thông qua lập trình, thiết kế gameplay và tối ưu trải nghiệm người chơi.</p>
-          <dl class="info">
-            <div><dt>Định hướng</dt><dd>Game Developer</dd></div>
-            <div><dt>Email</dt><dd>vntuong1234@gmail.com</dd></div>
-            <div><dt>Khu vực</dt><dd>TP. Hồ Chí Minh</dd></div>
-          </dl>
-          <ul class="stats">
-            <li><b data-count="2">0</b><span>năm học CNTT</span></li>
-            <li><b data-count="3">0</b><span>dự án cá nhân</span></li>
-            <li><b data-count="500" data-suffix="+">0</b><span>giờ code</span></li>
-          </ul>
+<div class="container">
+    <h1>Khảo sát: Bạn thuộc hệ ngôn ngữ lập trình nào?</h1>
+    
+    <div id="quiz-container">
+        <!-- 10 Câu hỏi -->
+        <div class="question" data-q="1">
+            <h3>Câu 1: Khi gặp một bài toán khó, bạn thường...</h3>
+            <label><input type="radio" name="q1" value="A"> Tìm thư viện có sẵn để giải quyết nhanh gọn.</label>
+            <label><input type="radio" name="q1" value="B"> Tự viết thuật toán từ con số 0 để tối ưu tốc độ.</label>
+            <label><input type="radio" name="q1" value="C"> Quan tâm xem giao diện hiển thị kết quả có đẹp không.</label>
+            <label><input type="radio" name="q1" value="D"> Cố gắng tìm cách giải quyết ít tốn bộ nhớ nhất.</label>
         </div>
-      </div>
-      <blockquote class="goal">
-        <h3>Mục tiêu nghề nghiệp</h3>
-        <p>Trở thành Game Developer vững kiến thức nền tảng, thực tập tại một công ty công nghệ trong 12 tháng tới và hoàn thiện kỹ năng làm việc nhóm cùng quy trình Git.</p>
-      </blockquote>
-    </section>
+        
+        <div class="question" data-q="2">
+            <h3>Câu 2: Bạn thích môi trường làm việc nào?</h3>
+            <label><input type="radio" name="q2" value="A"> Jupyter Notebook, Google Colab.</label>
+            <label><input type="radio" name="q2" value="B"> Visual Studio, CLion.</label>
+            <label><input type="radio" name="q2" value="C"> VS Code với hàng tá Extension cho Web.</label>
+            <label><input type="radio" name="q2" value="D"> Màn hình terminal đen xì.</label>
+        </div>
 
-    <!-- ===== KỸ NĂNG ===== -->
-    <section id="skills" class="reveal">
-      <h2>Kỹ năng</h2>
-      <ul class="skills">
-        <li style="--w:90%"><span>C#</span><b class="bar"><i></i></b></li>
-        <li style="--w:85%"><span>C++</span><b class="bar"><i></i></b></li>
-        <li style="--w:70%"><span>Python</span><b class="bar"><i></i></b></li>
-        <li style="--w:65%"><span>JavaScript</span><b class="bar"><i></i></b></li>
-        <li style="--w:60%"><span>HTML5</span><b class="bar"><i></i></b></li>
-        <li style="--w:60%"><span>CSS3</span><b class="bar"><i></i></b></li>
-      </ul>
-    </section>
+        <div class="question" data-q="3">
+            <h3>Câu 3: Đồ án môn học yêu thích của bạn là gì?</h3>
+            <label><input type="radio" name="q3" value="A"> Phân tích dữ liệu, AI, Machine Learning.</label>
+            <label><input type="radio" name="q3" value="B"> Lập trình Game 2D/3D hoặc hệ thống nhúng.</label>
+            <label><input type="radio" name="q3" value="C"> Xây dựng Website thương mại điện tử.</label>
+            <label><input type="radio" name="q3" value="D"> Lập trình hợp ngữ 8086 / Vi điều khiển.</label>
+        </div>
 
-    <!-- ===== HỌC VẤN / HOẠT ĐỘNG ===== -->
-    <section id="education" class="reveal">
-      <h2>Học vấn &amp; hoạt động</h2>
-      <ol class="timeline">
-        <li><time>2025 – nay</time><h3>Đại học Giao thông vận tải TP.HCM (UTH)</h3><p>Ngành Công nghệ thông tin. Chuyên ngành Khoa học dữ liệu & AI</p></li>
-        <li><time>2021 – 2025</time><h3>THPT (Vĩnh Bình Bắc)</h3><p>Học sinh giỏi, tham gia câu lạc bộ lập trình của trường.</p></li>
-      </ol>
-    </section>
+        <div class="question" data-q="4">
+            <h3>Câu 4: Bạn ghét điều gì nhất khi code?</h3>
+            <label><input type="radio" name="q4" value="A"> Format thụt lề sai (Indentation error).</label>
+            <label><input type="radio" name="q4" value="B"> Lỗi rò rỉ bộ nhớ (Memory leak) hoặc Segmentation fault.</label>
+            <label><input type="radio" name="q4" value="C"> CSS không chịu căn giữa, giao diện vỡ.</label>
+            <label><input type="radio" name="q4" value="D"> Debug từng thanh ghi (register).</label>
+        </div>
 
-    <!-- ===== DỰ ÁN ===== -->
-    <section id="projects" class="reveal">
-      <h2>Dự án cá nhân</h2>
-      <div class="filters" role="group" aria-label="Lọc dự án">
-        <button class="chip active" data-filter="all">Tất cả</button>
-        <button class="chip" data-filter="web">Website</button>
-        <button class="chip" data-filter="app">Ứng dụng</button>
-      </div>
-      <div class="projects">
-        <article class="project" data-cat="app">
-          <img src="images/spaceinvader.png" alt="Giao diện game Space Invaders" loading="lazy">
-          <div class="body">
-            <h3>Game Space Invaders</h3>
-            <p>Tái hiện lại trò chơi Space Invader</p>
-            <p class="tags">Qt · C++</p>
-            <button class="link" data-title="Game Space Invaders" data-desc="Space Invader là trò chơi bắn súng không gian góc nhìn từ trên xuống (Top-down Shooter). Người chơi điều khiển một máy bay ở đáy màn hình, di chuyển theo phương ngang để né tránh và bắn hạ các làn sóng quái vật ngoài hành tinh (Alien) đang rơi xuống liên tục.Trò chơi kết thúc khi người chơi hết mạng hoặcAlien xâm nhập thành công xuống vùng căn cứ." data-tech="Qt, C++" data-url="#">Xem chi tiết</button>
-          </div>
-        </article>
-        <article class="project" data-cat="app">
-          <img src="images/dinogame.png" alt="Giao diện DinoGame" loading="lazy">
-          <div class="body">
-            <h3>Game Dino</h3>
-            <p>Tựa game cuộn màn hình ngang vô tận (2D infinite runner).</p>
-            <p class="tags">C# · Unity</p>
-            <button class="link" data-title="Game Dino" data-desc="Người chơi điều khiển chú khủng long T-Rex đồ họa pixel di chuyển, ghi điểm bằng cách sống sót trước các chướng ngại vật xuất hiện với tốc độ tăng dần." data-tech="C#, Unity" data-url="#">Xem chi tiết</button>
-          </div>  
-        </article>
-        <article class="project" data-cat="web">
-          <img src="images/wedontsell.png" alt="Giao diện web WEDONTSELL" loading="lazy">
-          <div class="body">
-            <h3>Web WEDONTSELL</h3>
-            <p>Cung cấp đa dạng hàng hóa từ đồ điện tử đến thời trang với khẩu hiệu "Discover Millions of Products".</p>
-            <p class="tags">HTML · CSS · JavaScript</p>
-            <button class="link" data-title="Web WEDONTSELL" data-desc="Trang web WeDontSell Marketplace (wedontsell.eu.cc) là một nền tảng thương mại điện tử đa phân khúc, kết nối người mua với mạng lưới các nhà bán hàng đã qua kiểm định chất lượng. Giao diện trang chủ nổi bật với thông điệp Discover Millions of Products, đáp ứng đa dạng nhu cầu mua sắm qua các danh mục chính như thiết bị điện tử, thời trang, nhà cửa & đời sống, mỹ phẩm, bách hóa và văn phòng phẩm." data-tech="HTML, CSS, JavaScript" data-url="#">Xem chi tiết</button>
-          </div>
-        </article>
-      </div>
-    </section>
+        <div class="question" data-q="5">
+            <h3>Câu 5: Nếu được chọn thú cưng, bạn sẽ chọn:</h3>
+            <label><input type="radio" name="q5" value="A"> Một con trăn hoặc rắn (Python).</label>
+            <label><input type="radio" name="q5" value="B"> Một con sói cô độc và mạnh mẽ.</label>
+            <label><input type="radio" name="q5" value="C"> Tắc kè hoa (Thay đổi liên tục như framework JS).</label>
+            <label><input type="radio" name="q5" value="D"> Một chú rùa (Chậm rãi, chắc chắn, sống lâu).</label>
+        </div>
 
-    <!-- ===== CHỨNG CHỈ / GIẢI THƯỞNG / SỞ THÍCH ===== -->
-    <section id="extras" class="reveal">
-      <h2>Chứng chỉ, giải thưởng &amp; sở thích</h2>
-      <div class="extras">
-        <div><h3>Chứng chỉ</h3><p>Certificate of completion: AI Fluency for educators</p><p>Github Copilot</p></div>
-        <div><h3>Giải thưởng</h3><p>Chưa có</p></div>
-        <div><h3>Sở thích</h3><p>Lập trình, xem phim, chơi game, nghe nhạc.</p></div>
-      </div>
-    </section>
+        <div class="question" data-q="6">
+            <h3>Câu 6: Bạn định nghĩa thế nào về một đoạn code hoàn hảo?</h3>
+            <label><input type="radio" name="q6" value="A"> Càng ngắn càng tốt, đọc như tiếng Anh.</label>
+            <label><input type="radio" name="q6" value="B"> Chạy nhanh nhất, kiểm soát mọi luồng dữ liệu.</label>
+            <label><input type="radio" name="q6" value="C"> Tương tác mượt mà với người dùng.</label>
+            <label><input type="radio" name="q6" value="D"> Tác động trực tiếp xuống phần cứng.</label>
+        </div>
 
-    <!-- ===== LIÊN HỆ ===== -->
-    <section id="contact" class="reveal">
-      <h2>Liên hệ</h2>
-      <form id="form" class="form" novalidate>
-        <label>Họ và tên<input type="text" id="name" name="name" autocomplete="name"><small></small></label>
-        <label>Email<input type="email" id="email" name="email" autocomplete="email"><small></small></label>
-        <label class="full">Lời nhắn<textarea id="msg" name="msg" rows="4"></textarea><small></small></label>
-        <button class="btn" type="submit">Gửi lời nhắn</button>
-        <p id="status" role="status"></p>
-      </form>
-    </section>
-  </main>
+        <div class="question" data-q="7">
+            <h3>Câu 7: Cuối tuần bạn thường làm gì?</h3>
+            <label><input type="radio" name="q7" value="A"> Đọc tin tức về AI và công nghệ mới.</label>
+            <label><input type="radio" name="q7" value="B"> Cày game hoặc tối ưu lại project cũ.</label>
+            <label><input type="radio" name="q7" value="C"> Lướt web xem UI/UX của các trang web đẹp.</label>
+            <label><input type="radio" name="q7" value="D"> Tháo lắp máy tính, ráp linh kiện.</label>
+        </div>
 
-  <footer class="footer container"><p>© 2026 Võ Nhật Tường CNTT</p></footer>
+        <div class="question" data-q="8">
+            <h3>Câu 8: Cấu trúc dữ liệu yêu thích của bạn?</h3>
+            <label><input type="radio" name="q8" value="A"> DataFrame / Dictionary.</label>
+            <label><input type="radio" name="q8" value="B"> Con trỏ (Pointers), Cây (Trees).</label>
+            <label><input type="radio" name="q8" value="C"> JSON / Objects.</label>
+            <label><input type="radio" name="q8" value="D"> Ngăn xếp (Stack) và Hàng đợi (Queue).</label>
+        </div>
 
-  <button id="toTop" class="icon-btn top" aria-label="Lên đầu trang">↑</button>
+        <div class="question" data-q="9">
+            <h3>Câu 9: Khi ứng dụng bị lỗi, phản ứng đầu tiên của bạn?</h3>
+            <label><input type="radio" name="q9" value="A"> In ra màn hình (print) mọi thứ để kiểm tra.</label>
+            <label><input type="radio" name="q9" value="B"> Đặt breakpoint và chạy chế độ Debugger.</label>
+            <label><input type="radio" name="q9" value="C"> Mở Inspect Element (F12) xem Console tab.</label>
+            <label><input type="radio" name="q9" value="D"> Kiểm tra lại thiết kế hệ thống phần cứng.</label>
+        </div>
 
-  <dialog id="modal">
-    <h3 id="mTitle"></h3>
-    <p id="mDesc"></p>
-    <p class="tags" id="mTech"></p>
-    <div class="cta"><a class="btn" id="mLink" href="#" target="_blank" rel="noopener">Xem mã nguồn</a><button class="btn ghost" id="mClose">Đóng</button></div>
-  </dialog>
+        <div class="question" data-q="10">
+            <h3>Câu 10: Tương lai bạn muốn trở thành?</h3>
+            <label><input type="radio" name="q10" value="A"> Data Scientist / AI Engineer.</label>
+            <label><input type="radio" name="q10" value="B"> Game Developer / Software Architect.</label>
+            <label><input type="radio" name="q10" value="C"> Fullstack Web Developer.</label>
+            <label><input type="radio" name="q10" value="D"> Embedded Systems Engineer.</label>
+        </div>
 
-  <script src="main.js"></script>
+        <button id="submitBtn">Xem Kết Quả Bằng jQuery</button>
+    </div>
+
+    <!-- Vùng hiển thị kết quả -->
+    <div id="result-container">
+        <h2 id="result-title"></h2>
+        <img id="result-img" src="" alt="Result Image">
+        <p id="result-text"></p>
+        <button onclick="location.reload()">Làm Lại</button>
+    </div>
+</div>
+
+<!-- Nhúng file JavaScript chứa logic xử lý -->
+<script src="script.js"></script>
 </body>
 </html>
